@@ -1,11 +1,13 @@
-import { Card } from "../ui/admin/cards";
-import ConcertCard from "../ui/admin/concert-card";
+import { fetchConcerts } from "../lib/data";
+import ConcertList from "../ui/admin/concert-list";
+import CreateConcert from "../ui/admin/create";
 
 export default async function Page() {
+  const data = await fetchConcerts();
   return (
     <>
-      <Card />
-      <ConcertCard />
+      {data ? <ConcertList concerts={data.concerts} /> : <div>no data</div>}
+      <CreateConcert />
     </>
   );
 }
