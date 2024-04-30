@@ -1,36 +1,119 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<a name="readme-top"></a>
+
+<!-- HEADER -->
+<br />
+<div align="center">
+
+<h1 align="center">concert-ticket-frontend</h1>
+
+</div>
+
+<!-- TABLE OF CONTENTS -->
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">About The Project</a>
+      <ul>
+        <li><a href="#built-with">Built With</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#getting-started">Getting Started</a>
+      <ul>
+        <li><a href="#prerequisites">Prerequisites</a></li>
+        <li><a href="#installation">Installation</a></li>
+      </ul>
+    </li>
+    <li><a href="#usage">Usage</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#acknowledgments">Acknowledgments</a></li>
+    <li><a href="#bonus-track">Bonus Task</a></li>
+  </ol>
+</details>
+
+<!-- ABOUT THE PROJECT -->
+
+## About The Project
+
+This project is a website for concerts' tickets reservation with both admin and user role. For front-end, the website provides both admin and user page created with NextJS framework. For back-end, please visit: [concert-ticket-api](https://github.com/mmintst/concert-ticket-api)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+### Built With
+
+- [NextJS](https://nextjs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Tailwind](https://tailwindcss.com/)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- GETTING STARTED -->
 
 ## Getting Started
 
-First, run the development server:
+To get a local copy up and running follow these simple example steps.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### Prerequisites
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- npm
+  ```sh
+  npm install npm@latest -g
+  ```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Installation
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+1. Clone the repo
+   ```sh
+   git clone https://github.com/mmintst/concert-ticket-frontend.git
+   ```
+2. Install NPM packages
+   ```sh
+   npm install
+   ```
+3. Run project
+   ```sh
+   npm run dev
+   ```
 
-## Learn More
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-To learn more about Next.js, take a look at the following resources:
+<!-- USAGE EXAMPLES -->
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Usage
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+For the usage of frontend, it can be seperated into two parts. The first part is a page for admin which can create and delete concerts on the list and can also view all of the concerts' information and user's reservation and cancellation history. The second part is a page for user which can view, reserve and cancel the concerts.
 
-## Deploy on Vercel
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+<!-- CONTACT -->
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Contact
+
+Salisa Techasiripaiboon - salisa.t.mint@gmail.com
+
+Project Link: [https://github.com/mmintst/concert-ticket-api](https://github.com/mmintst/concert-ticket-api)
+
+As an assignment, I was unable to complete all of the requirements within the suggested time limit. Therefore, I decided to break down the requirements into small tasks and categorize them to prioritize the most important functions of the website. This is why I decided to leave out Unit Tests and Responsive UI as the last parts to do.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- ACKNOWLEDGMENTS -->
+
+## Acknowledgments
+
+Resources and Libraries
+
+- [axios](https://axios-http.com/)
+- [clsx](https://www.npmjs.com/package/clsx)
+- [dayjs](https://day.js.org/en/)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- BONUS TASK -->
+
+## Bonus Task
+
+- How to handle when many users want to reserve the ticket at the same time?
+
+When many users want to reserve the ticket, try to access the website and do the same action at the same time, it can cause an incorrect result which is a problem from race condition. To avoid race codition, we can use mutual exclusion to ensure that only one process can access data at a time. For example, when too many people are trying to reserve the ticket for the same concert on the website at the same time, we can make a condition of locking the data and block the accessing of data while the one who come first is making reservation as in action to data. When the first reservation is finished, the lock will be released and the next reservation can be made.
