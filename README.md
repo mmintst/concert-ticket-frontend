@@ -92,7 +92,7 @@ For the usage of frontend, it can be seperated into two parts. The first part is
 
 Salisa Techasiripaiboon - salisa.t.mint@gmail.com
 
-Project Link: [https://github.com/mmintst/concert-ticket-api](https://github.com/mmintst/concert-ticket-api)
+Project Link: [https://github.com/mmintst/concert-ticket-frontend](https://github.com/mmintst/concert-ticket-frontend)
 
 As an assignment, I was unable to complete all of the requirements within the suggested time limit. Therefore, I decided to break down the requirements into small tasks and categorize them to prioritize the most important functions of the website. This is why I decided to leave out Unit Tests and Responsive UI as the last parts to do.
 
